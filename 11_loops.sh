@@ -20,11 +20,12 @@ fi
 
 }   
 
-dnf install nginx -y &>> $LOGFILENAME
-VALIDATE $? "NGINX installation"
 
-dnf install mysql -y &>> $LOGFILENAME
-VALIDATE $? "MYSQL installation"
+for package in $@
+do 
+dnf install $package -y &>> $LOGFILENAME
+VALIDATE $? "$package   installation"
+done
 
-dnf install nodejs -y &>> $LOGFILENAME
-VALIDATE $? "NodeJS installation"
+
+
