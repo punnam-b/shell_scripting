@@ -6,6 +6,6 @@ NUMBER=25
 #-lt -> less than
 #-eq -> equal to
 #-ne -> not equal to
-if [$Number -gt 20]; then
-    echo "$NUMBER is greater than 20"
+if [ $NUMBER -gt 20 ]; then
+    echo " $NUMBER is greater than 20"
 fi
