@@ -8,6 +8,7 @@ fi
 
 
 echo "Installing NGINX web server"
+
 dnf install nginx -y
 
 CODE=$?
@@ -18,3 +19,13 @@ else
     echo "NGINX installed successfully"
 fi
 
+
+dnf install mysql -y
+
+CODE=$?
+if [ $CODE -ne 0 ]; then
+    echo "MYSQL installation failed"
+    exit 1
+else
+    echo "MYSQL installed successfully"
+fi
