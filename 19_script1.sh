@@ -8,3 +8,6 @@ echo "PROCESS ID IS $$"
 
 
 sh 20_script2.sh
+
+
+source ./20_script2.sh
